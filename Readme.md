@@ -7,4 +7,8 @@ With the development of e-commerce, shopping online is becoming more popular. Th
 ## Other Sources links:
 
 
-### [name](link)
+### [Pickle_file](link)
+
+### [All files used and generated in project](link)
+
+### [Detail Documentation](link)
