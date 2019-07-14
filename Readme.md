@@ -7,8 +7,8 @@ With the development of e-commerce, shopping online is becoming more popular. Th
 ## Other Sources links:
 
 
-### [Pickle_file](link)
+### [Pickle_file](https://drive.google.com/file/d/1Q4TuSOtj3CslCYaI27Ya-Dcumf2nn7sF/view?usp=sharing)
 
-### [All files used and generated in project](link)
+### [All files used and generated in project](https://drive.google.com/drive/folders/1lBCCDqxTdBHekgnBlVaIOhMU6CvPBkoG?usp=sharing)
 
-### [Detail Documentation](link)
+### [Detail Documentation](https://github.com/kvmuralikrishna1993/Product-Reccomdation-and-Analysis/blob/master/Project_Documentation/Product_Analysis%20Final%20Report.pdf)
