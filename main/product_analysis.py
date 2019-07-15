@@ -46,20 +46,20 @@ with open('sentiment_train.json', 'r') as fp:
   cl = NaiveBayesClassifier(fp, format="json")
 print("Sucessfully built the classifier ....")
 
-# print("calculating the accuracy of classifier...")
-# with open('sentiment_test.json', 'r') as test:
-#   print("classifier accuracy:")
-#   print(cl.accuracy(test,format="json"))
+print("calculating the accuracy of classifier...")
+with open('sentiment_test.json', 'r') as test:
+  print("classifier accuracy:")
+  print(cl.accuracy(test,format="json"))
 #73%
 
-# sentiment_classifier = open("naivebayes.pickle","wb")
-# print("Generating pickle file....")
+sentiment_classifier = open("naivebayes.pickle","wb")
+print("Generating pickle file....")
 
-# print("Dumping pickle....")
-# pickle.dump(cl, sentiment_classifier)
+print("Dumping pickle....")
+pickle.dump(cl, sentiment_classifier)
 
-# sentiment_classifier.close()
-# print("Pickle file created.....")
+sentiment_classifier.close()
+print("Pickle file created.....")
 
 
 # with open("naivebayes.pickle", "rb") as classifier_f:
@@ -88,16 +88,16 @@ documents = data_text
 print("Number of documents: "+str(len(documents))) #-001
 
 
-# print("classifying reviews...")
-# documents['Reviews'].map(classify)
-# print("reviews classified....")
+print("classifying reviews...")
+documents['Reviews'].map(classify)
+print("reviews classified....")
 
-# print()
-# print("No of positive sentences: "+str(len(positive_sen)))
-# print(str(positive_sen[0:10]))
-# print()
-# print("No of negative sentences: "+str(len(negative_sen)))
-# print(negative_sen[0:10])
+print()
+print("No of positive sentences: "+str(len(positive_sen)))
+print(str(positive_sen[0:10]))
+print()
+print("No of negative sentences: "+str(len(negative_sen)))
+print(negative_sen[0:10])
 
 def get_classfied_files(filename):
     unseen_document = ""
@@ -105,18 +105,18 @@ def get_classfied_files(filename):
         unseen_document = unseen_document+""+line
     return unseen_document
 
-# pos_str = (" ").join(positive_sen)
-# file1 = open("positive.txt","w")
-# file1.writelines(pos_str) 
-# file1.close()
+pos_str = (" ").join(positive_sen)
+file1 = open("positive.txt","w")
+file1.writelines(pos_str) 
+file1.close()
+
+neg_str = (" ").join(negative_sen)
+file2 = open("negative.txt","w")
+file2.writelines(neg_str) 
+file2.close()
 
 pos_str = get_classfied_files("positive.txt")
 neg_str = get_classfied_files("negative.txt")
-
-# neg_str = (" ").join(negative_sen)
-# file2 = open("negative.txt","w")
-# file2.writelines(neg_str) 
-# file2.close()
 
 def preprocess(text):
 	result = []
@@ -186,8 +186,8 @@ coherence_lda = coherence_model_lda.get_coherence()
 print('\nCoherence Score_tdif: ', coherence_lda)
 print()
 
-# vis = pyLDAvis.gensim.prepare(lda_model_tfidf,corpus_tfidf, dictionary)
-# pyLDAvis.save_html(vis, 'LDA_Vis_tfidf.html')
+vis = pyLDAvis.gensim.prepare(lda_model_tfidf,corpus_tfidf, dictionary)
+pyLDAvis.save_html(vis, 'LDA_Vis_tfidf.html')
 
 #for the positve sentences
 bow_vector = dictionary.doc2bow(preprocess(pos_str))
